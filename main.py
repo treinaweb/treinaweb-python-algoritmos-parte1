@@ -12,6 +12,9 @@ print("Vetor: ", numeros)
 print("Posição 1", numeros[1])
 
 # BUSCA LINEAR
+# Melhor caso: 1 vez
+# Pior caso: N vezes
+# Caso médio: n/2 vezes
 numero_pesquisar = int(input("Digite o valor a ser pesquisado no vetor: ")) #2
 posicao_resultado = -1
 for i in range(tamanho):
@@ -31,9 +34,13 @@ else:
 # 1 | 2 | 4 | 6 | 5
 # 1 | 2 | 4 | 5 | 6
 
-for i in range(tamanho):
+# Melhor caso: N * N = N^2
+# Pior caso: N * N = N^2
+# Caso médio: N * N = N^2
+
+for i in range(tamanho): # N
     indice_menor = i #5
-    for j in range(int(i + 1), tamanho):
+    for j in range(int(i + 1), tamanho): # N
         if numeros[j] < numeros[indice_menor]:
             indice_menor = j
     temp = numeros[indice_menor]
